@@ -1,6 +1,6 @@
 - 👋 Hi, I’m @ArtPM
-- 👀 I’m interested in Web Develpment and Game Design.
-- 📖 I’m currently learning HMTL, Javascript
+- 👀 I’m interested in Web Develpment & Game Design.
+- 📖 I’m currently learning HMTL, CSS & Javascript
 <div>
   <img align="center" src="https://github-readme-stats.vercel.app/api?username=ArtPM&show_icons=true&count_private=true&theme=midnight-purple">
   <img align="center" src="https://github-readme-stats.vercel.app/api/top-langs/?username=ArtPM&layout=compact&theme=midnight-purple">
