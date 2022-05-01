@@ -6,18 +6,19 @@
 
 <div>
   <img height="180em" src="https://github-readme-stats.vercel.app/api?username=arthurpeixotomelo&show_icons=true&count_private=true&theme=midnight-purple">
-  <img height="150em" src="https://github-readme-stats.vercel.app/api/top-langs/?username=arthurpeixotomelo&layout=compact&theme=midnight-purple">
+  <img height="180em" src="https://github-readme-stats.vercel.app/api/top-langs/?username=arthurpeixotomelo&show_icons=true&layout=compact&theme=midnight-purple">
 </div>
 
 <div style="display: inline-block;">
   <img align="center" height="30" width="40" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg">
   <img align="center" height="30" width="40" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg">
+  <img align="center" height="30" width="40" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sass/sass-original.svg">
   <img align="center" height="30" width="40" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg">
-  <img align="center" height="30" width="40" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg">
   <img align="center" height="30" width="40" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg">
   <img align="center" height="30" width="40" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg">
   <img align="center" height="30" width="40" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/gatsby/gatsby-original.svg">
   <img align="center" height="30" width="40" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg">
+  <img align="center" height="30" width="40" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg">
 </div> <br>
 
 ##
