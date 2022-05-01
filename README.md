@@ -1,10 +1,12 @@
-- 👋 Hi, I’m @ArtPM
+- Hi, I’m @ArtPM
 - Currently in a Bachelor's Degree in Data Science at UNIVESP
 - Web Developer
 
+##
+
 <div>
-  <img width="180em" src="https://github-readme-stats.vercel.app/api?username=arthurpeixotomelo&show_icons=true&count_private=true&theme=midnight-purple">
-  <img width="150em" src="https://github-readme-stats.vercel.app/api/top-langs/?username=arthurpeixotomelo&layout=compact&theme=midnight-purple">
+  <img height="180em" src="https://github-readme-stats.vercel.app/api?username=arthurpeixotomelo&show_icons=true&count_private=true&theme=midnight-purple">
+  <img height="150em" src="https://github-readme-stats.vercel.app/api/top-langs/?username=arthurpeixotomelo&layout=compact&theme=midnight-purple">
 </div>
 
 <div style="display: inline-block;">
