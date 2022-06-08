@@ -1,4 +1,3 @@
-- Hi, I’m @ArtPM
 - Currently in a Bachelor's Degree in Data Science at UNIVESP
 - Web Developer
 
