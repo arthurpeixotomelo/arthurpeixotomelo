@@ -1,0 +1,77 @@
+.card {
+  margin-top: var(--mspace4);
+  width: calc(900px * 0.35);
+  height: calc(800px * 0.35);
+  position: relative;
+  overflow: hidden;
+  border-radius: var(--b2);
+  border: solid var(--mspace1) var(--cardcolor);
+  background: var(--cardcolor);
+  box-shadow: var(--glasshadow);
+}
+
+.thumbnail::before {
+    content: url(../public/images/image.svg);
+    position: absolute;
+    z-index: -1;
+    inset: 50%;
+    opacity: 0.2;
+}
+
+.thumbnail {
+  background-color: white;
+  transform: scale(0.355);
+  transform-origin: 0 0;
+}
+
+.thumbnail::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+}
+
+.thumbnail, .thumbnail iframe {
+  width: 900px;
+  height: 500px;
+}
+
+.link {
+    width: 100%;
+    position: absolute;
+    top: calc(550px * 0.35);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--mspace2);
+}
+
+.link a {
+    color: var(--primarycolor);
+    padding: var(--mspace1) var(--mspace2);
+    border-radius: var(--b1);
+    border: 2px solid var(--primarycolor);
+}
+
+.link > div {
+    display: flex;
+    align-items: center;
+    gap: var(--mspace1);
+
+}
+
+.link span {
+    padding: var(--mspace1) var(--mspace2);
+    border-radius: var(--b2);
+    box-shadow: var(--insideshadow);
+}
+
+@media (min-width: 900px) {
+  .card {
+    width: calc(1200px * 0.35);
+  }
+  
+  
+  .thumbnail, .thumbnail iframe {
+    width: 1200px;
+  }
+} 

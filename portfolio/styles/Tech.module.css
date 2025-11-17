@@ -1,0 +1,41 @@
+.details {
+  padding: var(--mspace1);
+}
+
+.title {
+  margin: var(--mspace1) 0;
+  padding: var(--mspace1);
+  border-radius: var(--b1);
+  background: var(--cardcolor);
+  box-shadow: var(--glasshadow);
+  text-align: center;
+}
+
+.cards {
+  display: flex;
+  justify-content: space-around;
+  padding: var(--mspace2); 
+}
+
+.card {
+  width: 3rem;
+  aspect-ratio: 1/1;
+  border-radius: var(--b2);
+  background: var(--cardcolor);
+  box-shadow: var(--glasshadow);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@media (min-width: 500px) {
+  .title {
+    margin: var(--space2) 0;
+    padding: var(--space1);
+  }
+
+  .card {
+    width: 4rem;
+    border-radius: var(--b3);
+  }
+}

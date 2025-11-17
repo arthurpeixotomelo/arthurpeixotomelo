@@ -1,0 +1,271 @@
+.background {
+  width: 90%;
+  margin: auto;
+}
+
+.header {
+  margin: var(--mspace2) 0;
+  display: flex;
+  flex-direction: column;
+  gap: var(--mspace2);
+}
+
+.profile {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  border-radius: var(--b3);
+  background-color: var(--cardcolor);
+  box-shadow: var(--glasshadow);
+  padding-top: var(--mspace2);
+}
+
+.photo {
+  position: relative;
+  overflow: hidden;
+  width: 50%;
+  aspect-ratio: 1/1;
+  border-radius: var(--bfull);
+  border: solid var(--mspace1) var(--primarycolor);
+}
+
+.profile h1 {
+  color: var(--primarycolor);
+}
+
+.contact {
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.aside {
+  display: contents;
+  gap: var(--mspace2);
+}
+
+.buttons {
+  display: flex;
+  justify-content: space-between;
+  gap: var(--mspace2);
+}
+
+.button {
+  border-radius: var(--b2);
+  background: var(--cardcolor);
+  box-shadow: var(--glasshadow);
+  padding: var(--mspace2);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-grow: 0;
+}
+
+.button:nth-of-type(2) {
+  flex-grow: 1;
+}
+
+.button span {
+  display: none;
+}
+
+.button a {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.25rem;
+  gap: var(--mspace1);
+  color: var(--primarycolor);
+}
+
+.button a p {
+  display: contents;
+}
+
+.toggle {
+  padding: var(--mspace2) var(--mspace4);
+  position: relative;
+}
+
+.toggle::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: var(--b3);
+  background: var(--cardcolor);
+  box-shadow: var(--insideshadow);
+}
+
+.toggle label {
+  position: absolute;
+  cursor: pointer;
+  width: 50%;
+  inset: var(--mspace1);
+  border-radius: var(--bfull);
+  background: var(--primarycolor);
+  box-shadow: var(--buttonshadow);
+  transition: all 0.5s cubic-bezier(0.24, -0.3, 0.52, 1.3);
+}
+
+.toggle input[type=checkbox]:checked ~ label {
+  transform: translateX(70%);
+}
+
+.cards {
+  display: flex;
+  gap: var(--mspace2);
+}
+
+.cards > div {
+  flex-grow: 1;
+  padding: var(--mspace2);
+  border-radius: var(--b2);
+  background: var(--cardcolor);
+  box-shadow: var(--glasshadow);
+}
+
+.cards p {
+  display: flex;
+  gap: var(--mspace1);
+}
+
+.aside nav {
+  border-radius: var(--b2);
+  background: var(--cardcolor);
+  box-shadow: var(--glasshadow);
+  padding: var(--mspace2);
+}
+
+.switch {
+  position: relative;
+  overflow: hidden;
+  padding: var(--mspace3);
+  border-radius: var(--b2);
+  background: var(--cardcolor);
+  box-shadow: var(--insideshadow);
+}
+
+.switch label {
+  cursor: pointer;
+  text-align: center;
+  position: absolute;
+  width: 25%;
+  z-index: 1;
+  inset: var(--mspace1);
+  border-radius: var(--b2);
+}
+
+.switch label:nth-of-type(2) {
+  transform: translateX(145%);
+}
+
+.switch label:nth-of-type(3) {
+  transform: translateX(290%);
+}
+
+.switch input[type=radio] {
+  position: absolute;
+  opacity: 0;
+}
+
+.switch input[type=radio]:nth-of-type(2):checked ~ .slider {
+  transform: translateX(145%);
+}
+
+.switch input[type=radio]:nth-of-type(3):checked ~ .slider {
+  transform: translateX(290%);
+}
+
+.slider {
+  position: absolute;
+  width: 25%;
+  inset: var(--mspace1);
+  border-radius: var(--b2);
+  background: var(--primarycolor);
+  box-shadow: var(--buttonshadow);
+  transition: all 0.6s cubic-bezier(0.24, -0.3, 0.52, 1.25);
+}
+
+.section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 0 var(--mspace3);
+}
+
+@media (min-width: 500px) {
+  .photo {
+    width: 30%;
+  }
+
+  .button span {
+    display: unset;
+  }
+
+  .cards p {
+    margin: var(--space1) 25%;
+    gap: var(--space1);
+  }
+
+  .aside nav {
+    padding: calc(var(--space1) + 0.25rem);
+  }
+  
+  .switch label:nth-of-type(3) {
+    transform: translateX(294%);
+  }
+
+  .switch input[type=radio]:nth-of-type(3):checked ~ .slider {
+    transform: translateX(294%);
+  }
+
+  .section {
+    flex-direction: initial;
+    flex-wrap: wrap;
+  }
+}
+
+@media (min-width: 900px) {
+  .background {
+    width: 95%;
+  }
+
+  .header {
+    flex-direction: unset;
+    gap: var(--space2);
+  }
+
+  .profile {
+    padding: var(--space1);
+  }
+
+  .aside {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space2);
+    flex-grow: 1;
+  }
+
+  .buttons {
+    gap: var(--space3);
+  }
+
+  .button {
+    flex-grow: 1;
+  }
+
+  .cards {
+  gap: var(--space3);
+  }
+
+  .cards > div {
+    padding: var(--space3);
+  }
+
+  .cards p {
+    margin: var(--space1) 15%;
+  }
+}
