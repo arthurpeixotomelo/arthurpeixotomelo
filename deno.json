@@ -1,0 +1,81 @@
+{
+  "exclude": ["dist/", ".astro/", "node_modules/"],
+  "tasks": {
+    "fmt": "deno fmt",
+    "dev": "astro dev",
+    "lint": "deno lint",
+    "build": "astro build",
+    "check": "deno check --unstable-tsgo src/**/*.ts src/**/*.tsx"
+  },
+  "imports": {
+    "@astrojs/compiler-rs": "npm:@astrojs/compiler-rs@0.2.1",
+    "@astrojs/react": "npm:@astrojs/react@5.0.5",
+    "@deno/astro-adapter": "npm:@deno/astro-adapter@0.5.1",
+    "@types/react": "npm:@types/react@19.2.15",
+    "@types/react-dom": "npm:@types/react-dom@19.2.3",
+    "astro": "npm:astro@6.3.7",
+    "browserslist": "npm:browserslist@4.28.2",
+    "lightningcss": "npm:lightningcss@1.32.0",
+    "react": "npm:react@19.2.6",
+    "react-dom": "npm:react-dom@19.2.6",
+    "remark-parse": "npm:remark-parse@11.0.0",
+    "remark-pdf": "npm:remark-pdf@0.2.4",
+    "unified": "npm:unified@11.0.5"
+  },
+  "compilerOptions": {
+    "jsx": "react-jsx",
+    "jsxImportSource": "react",
+    "jsxImportSourceTypes": "@types/react",
+    "lib": [
+      "deno.ns",
+      "deno.unstable",
+      "dom",
+      "dom.iterable",
+      "dom.asynciterable",
+      "webworker",
+      "webworker.iterable",
+      "webworker.asynciterable",
+      "webworker.importscripts"
+    ]
+  },
+  "fmt": {
+    "singleQuote": true,
+    "semiColons": false,
+    "trailingCommas": "never"
+  },
+  "lint": {
+    "rules": {
+      "tags": ["jsr", "jsx", "react", "recommended", "workspace"],
+      "include": [
+        "ban-untagged-todo",
+        "camelcase",
+        "default-param-last",
+        "eqeqeq",
+        "explicit-function-return-type",
+        "explicit-module-boundary-types",
+        "guard-for-in",
+        "no-await-in-loop",
+        "no-const-assign",
+        "no-non-null-asserted-optional-chain",
+        "no-non-null-assertion",
+        "no-undef",
+        "no-useless-rename",
+        "no-self-compare",
+        "no-sparse-arrays",
+        "no-sync-fn-in-async-fn",
+        "no-throw-literal"
+      ],
+      "exclude": ["no-sloppy-imports"]
+    }
+  },
+  "nodeModulesDir": "auto",
+  "unstable": [
+    "cron",
+    "fmt-sql",
+    "fmt-component",
+    "kv",
+    "sloppy-imports",
+    "webgpu",
+    "worker-options"
+  ]
+}
