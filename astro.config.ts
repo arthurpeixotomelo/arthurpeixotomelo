@@ -7,31 +7,25 @@ import { defineConfig, memoryCache, svgoOptimizer, logHandlers } from "astro/con
 // https://astro.build/config
 export default defineConfig({
   adapter: deno(),
-  compressHTML: "jsx",
+  cache: { provider: memoryCache() },
   experimental: {
-    cache: { provider: memoryCache() },
     clientPrerender: true,
     contentIntellisense: true,
-    logger: logHandlers.compose(
-      logHandlers.console({ level: "info" }),
-      logHandlers.json({ level: "info", pretty: true }),
-      logHandlers.node({ level: "info" }),
-    ),
-    queuedRendering: {
-      enabled: true,
-    },
-    rustCompiler: true,
     svgOptimizer: svgoOptimizer(),
   },
+  integrations: [react()],
+  logger: logHandlers.compose(
+    logHandlers.console({ level: "info" }),
+    logHandlers.json({ level: "info", pretty: true }),
+    logHandlers.node({ level: "info" }),
+  ),
   output: "server",
   prefetch: {
     prefetchAll: true,
   },
-  integrations: [react()],
   vite: {
     build: {
-      cssMinify: "lightningcss",
-      sourcemap: true,
+      cssMinify: "lightningcss"
     },
     css: {
       lightningcss: {
@@ -40,7 +34,7 @@ export default defineConfig({
       transformer: "lightningcss",
     },
     ssr: {
-      noExternal: ["@astrojs/react", "remark-pdf"],
+      noExternal: ["@astrojs/react"],
     },
   },
 });

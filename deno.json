@@ -1,26 +1,28 @@
 {
-  "exclude": ["dist/", ".astro/", "node_modules/"],
+  "exclude": [
+    "dist/",
+    ".astro/",
+    "node_modules/"
+  ],
   "tasks": {
     "fmt": "deno fmt",
     "dev": "astro dev",
     "lint": "deno lint",
     "build": "astro build",
-    "check": "deno check --unstable-tsgo src/**/*.ts src/**/*.tsx"
+    "check": "deno check src/**/*.ts src/**/*.tsx"
   },
   "imports": {
-    "@astrojs/compiler-rs": "npm:@astrojs/compiler-rs@0.2.1",
-    "@astrojs/react": "npm:@astrojs/react@5.0.5",
-    "@deno/astro-adapter": "npm:@deno/astro-adapter@0.5.1",
-    "@types/react": "npm:@types/react@19.2.15",
+    "@astrojs/react": "npm:@astrojs/react@6.0.1",
+    "@deno/astro-adapter": "npm:@deno/astro-adapter@0.6.0",
+    "@types/react": "npm:@types/react@19.2.17",
     "@types/react-dom": "npm:@types/react-dom@19.2.3",
-    "astro": "npm:astro@6.3.7",
-    "browserslist": "npm:browserslist@4.28.2",
+    "astro": "npm:astro@7.0.9",
+    "browserslist": "npm:browserslist@4.28.6",
     "lightningcss": "npm:lightningcss@1.32.0",
-    "react": "npm:react@19.2.6",
-    "react-dom": "npm:react-dom@19.2.6",
-    "remark-parse": "npm:remark-parse@11.0.0",
-    "remark-pdf": "npm:remark-pdf@0.2.4",
-    "unified": "npm:unified@11.0.5"
+    "pdfkit": "npm:pdfkit@^0.19.1",
+    "react": "npm:react@19.2.7",
+    "react-dom": "npm:react-dom@19.2.7",
+    "satteri": "npm:satteri@^0.9.5"
   },
   "compilerOptions": {
     "jsx": "react-jsx",
@@ -45,7 +47,13 @@
   },
   "lint": {
     "rules": {
-      "tags": ["jsr", "jsx", "react", "recommended", "workspace"],
+      "tags": [
+        "jsr",
+        "jsx",
+        "react",
+        "recommended",
+        "workspace"
+      ],
       "include": [
         "ban-untagged-todo",
         "camelcase",
@@ -65,16 +73,20 @@
         "no-sync-fn-in-async-fn",
         "no-throw-literal"
       ],
-      "exclude": ["no-sloppy-imports"]
+      "exclude": [
+        "no-sloppy-imports"
+      ]
     }
   },
   "nodeModulesDir": "auto",
   "unstable": [
+    "bundle",
     "cron",
     "fmt-sql",
     "fmt-component",
     "kv",
     "sloppy-imports",
+    "tsgo",
     "webgpu",
     "worker-options"
   ]
